@@ -8,7 +8,7 @@
 #define MOTOR_H_
 
 #include <avr/io.h>
-#include "../pwm/pwm.h"
+#include "../MCAL/pwm.h"
 
 /*************************************************
  *  API functions

@@ -14,16 +14,14 @@
  **************************************************************/
 
 
-#include "std_types.h"
-#include "config.h"
-
+#include "../ServiceLayer/std_types.h"
 #define INPUT   0
 #define OUTPUT  1
 
 /*********************************************************************
 * Function    : GPIO_InitPort(uint8 PortName, uint8 Value)
 * DESCRIPTION : This function used to Initialize port.
-* PARAMETERS  :  
+* PARAMETERS  :
 *             -PortName: write which port need to access.
 *             -Value   : write the value (hex,binary,decimal)
 * Return Value: return -1 if user enter wrong inputs or return 1 if OK.
@@ -33,7 +31,7 @@ sint8  GPIO_InitPort (uint8 PortName, uint8 Value);
 /*********************************************************************
 * Function    : GPIO_WritePort(uint8 PortName,uint8 Value);
 * DESCRIPTION : This function used to write value to any port.
-* PARAMETERS  :  
+* PARAMETERS  :
 *              -PortName: write which port need to access.
 *              -Value   : write the value (hex,binary,decimal)
 * Return Value: return -1 if user enter wrong inputs or return 1 if OK.
@@ -43,7 +41,7 @@ sint8  GPIO_WritePort(uint8 PortName, uint8 Value);
 /*********************************************************************
 * Function    : GPIO_ReadPort (uint8 PortName);
 * DESCRIPTION : This function used to read value from any port.
-* PARAMETERS  :  
+* PARAMETERS  :
 *             -PortName: write which port need to access.
 * Return Value: return -1 if user enter wrong inputs or return value of port.
 ***********************************************************************/
@@ -63,7 +61,7 @@ BOOLEAN  GPIO_InitPin (uint8 PortName, uint8 PinNumber,uint8 Direction);
 /*********************************************************************
 * Function    : GPIO_SetPin (uint8 PortName, uint8 PinNumber);
 * DESCRIPTION : This function used to set pin any port.
-* PARAMETERS  :  
+* PARAMETERS  :
 *             -PortName:  write which port need to access.
 *             -PinNumber: write the value in range (0 -> 7).
 * Return Value: return -1 if user enter wrong inputs or return 1 if OK.
@@ -83,7 +81,7 @@ sint8  GPIO_ClearPin (uint8 PortName, uint8 PinNumber);
 /*********************************************************************
 * Function    : GPIO_SetPort  (uint8 PortName);
 * DESCRIPTION : This function used to set port.
-* PARAMETERS  :  
+* PARAMETERS  :
 *            -PortName: write which port need to access.
 * Return Value: return -1 if user enter wrong inputs or return 1 if OK.
 ***********************************************************************/
@@ -92,7 +90,7 @@ sint8 GPIO_SetPort  (uint8 PortName);
 /*********************************************************************
 * Function    : GPIO_ClearPort(uint8 PortName);
 * DESCRIPTION : This function used to clear port.
-* PARAMETERS  :  
+* PARAMETERS  :
 *            -PortName: write which port need to access.
 * Return Value: return -1 if user enter wrong inputs or return 1 if OK.
 ***********************************************************************/
@@ -101,7 +99,7 @@ sint8  GPIO_ClearPort(uint8 PortName);
 /*********************************************************************
 * Function    : GPIO_TogglePin(uint8 PortName, uint8 PinNumber);
 * DESCRIPTION : This function used to toggle any PIN in any PORT.
-* PARAMETERS  :  
+* PARAMETERS  :
 *             PortName:  write which port need to access.
 *             PinNumber: write the value
 * Return Value: return -1 if user enter wrong inputs or return 1 if OK.
@@ -111,11 +109,11 @@ sint8  GPIO_TogglePin(uint8 PortName, uint8 PinNumber);
 /*********************************************************************
 * Function    : GPIO_CheckPin (uint8 PortName, uint8 PinNumber);
 * DESCRIPTION : This function used to Check pin status .
-* PARAMETERS  :  
+* PARAMETERS  :
 *              PortName:   write which port need to access.
 *              PinNumber:  write the value
 * Return Value: The function will return -1 if user enter wrong inputs.
-*               or return 1 if Pin ON and 0 If pin OFF.  
+*               or return 1 if Pin ON and 0 If pin OFF.
 ***********************************************************************/
  sint8  GPIO_CheckPin (uint8 PortName, uint8 PinNumber);
 

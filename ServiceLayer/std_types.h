@@ -12,7 +12,7 @@
  *  Description: standard data types
  *  Date   :     22/02/2018
  **************************************************************/
- 
+
 
 #ifndef STD_TYPES_H
 #define STD_TYPES_H

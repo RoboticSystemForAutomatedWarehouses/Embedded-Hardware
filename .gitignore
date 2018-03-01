@@ -1,0 +1,6 @@
+GPIO.o
+main.o
+motor.o
+pwm.o
+run
+run.hex

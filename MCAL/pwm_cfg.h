@@ -7,7 +7,7 @@
 #ifndef PWM_CFG_H_
 #define PWM_CFG_H_
 #include <avr/io.h>
-
+#include "../ServiceLayer/std_types.h"
 /* TCCR0. (0111 1011) 0x
  * Bit 7    FOC0: writing a logical one to the FOC0 bit, an immediate compare match is forced on the Waveform Generation unit.
  * Bit 6,3  WGM01:0:  1 1 Fast PWM

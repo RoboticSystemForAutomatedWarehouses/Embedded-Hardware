@@ -13,6 +13,7 @@
  *  Date   :     22/02/2018
  **************************************************************/
 
+#include <avr/io.h>
 #include "GPIO.h"
 
 
@@ -238,7 +239,7 @@ sint8  GPIO_SetPin   (uint8 PortName, uint8 PinNumber)
 		State = -1;
 	}
 	else
-	{    
+	{
 		State = 1;
 		switch(PortName)
 		{
