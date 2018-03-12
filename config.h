@@ -23,6 +23,8 @@
 #include "MCAL/GPIO.h"
 #include "MCAL/pwm.h"
 #include "HAL/motor.h"
+#include "HAL/lineTracer.h"
+
 #include "ServiceLayer/std_types.h"
 #include <avr/io.h>
 #include <avr/interrupt.h>

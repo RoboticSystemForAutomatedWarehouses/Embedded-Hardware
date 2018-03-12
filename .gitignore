@@ -2,5 +2,6 @@ GPIO.o
 main.o
 motor.o
 pwm.o
+lineTracer.o
 run
 run.hex
