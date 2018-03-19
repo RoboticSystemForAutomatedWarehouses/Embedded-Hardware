@@ -75,3 +75,15 @@ void UART_Transmit_string (char * str,uint8_t UART)
 	 while(str[i]!=0)
 	    {UART_Transmit(str[i],UART) ; i++;}
 }
+
+void UART_receiveString(unsigned char *Str)
+{
+	unsigned char i = 0;
+	Str[i] = UART_recieveByte();
+	while(Str[i] != '#')
+	{
+		i++;
+		Str[i] = UART_recieveByte();
+	}
+	Str[i] = '\0';
+}
