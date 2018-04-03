@@ -26,6 +26,7 @@
 #include "ServiceLayer/std_types.h"
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include "MCAL/uart.h"
 #include <util/delay.h>
 
 #endif /* CONFIG_H_ */

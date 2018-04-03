@@ -68,7 +68,7 @@ uint8_t UART_Read(uint8_t UART)
 	}	
 }
 
-
+/*
 void UART_Transmit_string (char * str,uint8_t UART)
 {
 	unsigned char i= 0;
@@ -87,3 +87,4 @@ void UART_receiveString(unsigned char *Str)
 	}
 	Str[i] = '\0';
 }
+*/
