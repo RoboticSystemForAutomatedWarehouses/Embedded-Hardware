@@ -76,14 +76,14 @@ void UART_Transmit_string (char * str,uint8_t UART)
 	    {UART_Transmit(str[i],UART) ; i++;}
 }
 
-void UART_receiveString(unsigned char *Str)
+void UART_receiveString(unsigned char *Str,uint8_t UART)
 {
 	unsigned char i = 0;
-	Str[i] = UART_recieveByte();
-	while(Str[i] != '#')
+	Str[i] = UART_Read(UART) ;
+	while(Str[i] != '#')                //you need to cin '#' to complete this task or choose any symbol
 	{
 		i++;
-		Str[i] = UART_recieveByte();
+		Str[i] = UART_Read(UART) ;
 	}
 	Str[i] = '\0';
 }
