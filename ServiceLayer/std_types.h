@@ -14,8 +14,9 @@
  **************************************************************/
 
 
-#ifndef STD_TYPES_H
-#define STD_TYPES_H
+#ifndef STD_TYPES_H_
+#define STD_TYPES_H_
+
 
 typedef unsigned char uint8;
 typedef signed char sint8;
@@ -34,6 +35,8 @@ typedef int int16;
 #define UWORD uint16
 #define LONG sint32
 #define ULONG uint32
+#define HIGH 1
+#define LOW 0
 #define TRUE 1
 #define FALSE 0
 #define FAILURE  0
