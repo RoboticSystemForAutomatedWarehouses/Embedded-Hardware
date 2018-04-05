@@ -14,8 +14,8 @@
 
 #define motorDirectionsPort 'D'
 
-#define rightMotorDirection1 4
-#define rightMotorDirection2 5
+#define rightMotorDirection1 5
+#define rightMotorDirection2 4
 
 #define leftMotorDirection1 6
 #define leftMotorDirection2 7
@@ -25,6 +25,11 @@
 #define BACKWORD 1
 #define RIGHT 0
 #define LEFT 1
+
+//SET MOTOR MAX SPEED
+#define MAXSPEEDPRECENTAGE 0.75
+#define MAX_SPEED (255*MAXSPEEDPRECENTAGE) // 255 * (0.75)
+
 /*************************************************
  *  API functions
  *************************************************/

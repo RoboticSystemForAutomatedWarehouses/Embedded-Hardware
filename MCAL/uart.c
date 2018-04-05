@@ -95,7 +95,3 @@ void UART_receiveString(unsigned char *Str,uint8_t UART)
 ISR(USART1_RX_vect) {
 		//Here goes the ISR code of UART0
 }
-
-ISR(USART1_RX_vect) {
-		//Here goes the ISR code of UART1
-}
