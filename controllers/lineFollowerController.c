@@ -4,7 +4,7 @@ float activeSensor = 0; // Count active sensors
 float totalSensor = 0; // Total sensor readings
 float avgSensor = 3; // Average sensor reading
 
-float Kp = (MAX_SPEED/(TOTALSENS/AVERAGESENS));   // Max deviation = 5-3 = 2 ||  MAX_SPEED(178.5)/2 = 89.25
+float Kp = (MAX_SPEED/(TOTALSENS-AVERAGESENS));   // Max deviation = 5-3 = 2 ||  MAX_SPEED(178.5)/2 = 89.25
 float Ki = 0.00015; //0.00015
 float Kd = 5; //5
 

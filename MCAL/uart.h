@@ -6,8 +6,7 @@
 #include "uart_config.h"
 #include <math.h>
 
-#define BAUD_RATE FOSC/16/BAUD-1 // Eqn to calculate BuadRate
-
+#define BAUD_RATE ((FOSC)/(BAUD*16UL)-1) // Eqn to calculate BuadRate
 
 
 

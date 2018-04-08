@@ -79,7 +79,7 @@ void UART_Transmit_string (char * str,uint8_t UART)
 	 while(str[i]!=0)
 	    {UART_Transmit(str[i],UART) ; i++;}
 }
-
+/*
 void UART_receiveString(unsigned char *Str,uint8_t UART)
 {
 	unsigned char i = 0;
@@ -91,7 +91,12 @@ void UART_receiveString(unsigned char *Str,uint8_t UART)
 	}
 	Str[i] = '\0';
 }
-
-ISR(USART1_RX_vect) {
+*/
+/*ISR(USART1_RX_vect) {
 		//Here goes the ISR code of UART0
+}*/
+/*
+ISR(USART1_RX_vect) {
+		//Here goes the ISR code of UART1
 }
+*/
