@@ -1,7 +1,7 @@
 /*
  * newtask.c
  *
- *  Created on: ??ş/??ş/????
+ *  Created on: ??Ã¾/??Ã¾/????
  *      Author: Abdullah
  */
 
@@ -56,7 +56,7 @@ void tasks_dividing()
 		if(cnt%3 == 2 || cnt == 2 ) {cnt++ ; continue ;}
 	   else {request_task_again() ; clear_task_buffer() ; break ;}
 	}
-	if(task_buffer[cnt] != '/' && number_of_tasks != 0)
+	if(task_buffer[cnt] != '/')
 	{
 		int determine = ((cnt/3 < 8)*0)+((((cnt/3)<15) && ((cnt/3)>= 8))*1)+((((cnt/3)<22) && ((cnt/3)>= 15))*2) ;
 	    if(cnt % 21 == 3) {task[determine].id = ((task_buffer[cnt]-'0')*10) + (task_buffer[cnt+=1]-'0') ; }
