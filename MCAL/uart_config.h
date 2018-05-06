@@ -1,6 +1,7 @@
 #ifndef UART_CONFG_H_
 #define UART_CONFG_H_
 
+#include "../ServiceLayer/std_types.h"
 #define FOSC		8000000            // Clock Speed
 #define BAUD		9600			   // Baud Rate
 

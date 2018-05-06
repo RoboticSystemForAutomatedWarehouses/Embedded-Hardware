@@ -49,6 +49,10 @@ sint8  GPIO_InitPort (uint8 PortName, uint8 Value)
 	case 'F':
 		DDRF = Value;
 		break;
+	case 'g':
+	case 'G':
+		DDRG = Value;
+		break;
 	default:
 		state = -1;
 
@@ -88,6 +92,10 @@ sint8  GPIO_WritePort(uint8 PortName,uint8 Value)
 	case 'F':
 		PORTF = Value;
 		break;
+	case 'g':
+	case 'G':
+		PORTG = Value;
+		break;
 	default:
 		state = -1;
 	}
@@ -124,6 +132,10 @@ sint16 GPIO_ReadPort (uint8 PortName)
 	case 'f':
 	case 'F':
 		state = PINF;
+		break;
+	case 'g':
+	case 'G':
+		state = PING;
 		break;
 	default:
 		state = -1;
@@ -223,6 +235,20 @@ BOOLEAN  GPIO_InitPin (uint8 PortName,uint8 PinNumber,uint8 Direction)
     	 break;
     	 }
     	 break;
+	 case 'g':
+	 case 'G':
+		 switch(Direction)
+		 {
+		 case INPUT:
+		 DDRG &= ~(1 << PinNumber);
+		 break;
+		 case OUTPUT:
+		 DDRG |=  (1 << PinNumber);
+		 break;
+		 default:
+		 break;
+		 }
+		 break;
     	 default:
     	bState = -1;
 		}
@@ -267,6 +293,10 @@ sint8  GPIO_SetPin   (uint8 PortName, uint8 PinNumber)
 		case 'F':
 			PORTF |= (1 << PinNumber);
 		   break;
+		case 'g':
+		case 'G':
+			PORTG |= (1 << PinNumber);
+		    break;
 		default:
 			State = -1;
 		}
@@ -312,6 +342,10 @@ sint8  GPIO_ClearPin (uint8 PortName, uint8 PinNumber)
 		case 'F':
 			PORTF &= ~(1 << PinNumber);
 			break;
+		case 'g':
+		case 'G':
+			PORTG &= ~(1 << PinNumber);
+			break;
 		default:
 			State = -1;
 		}
@@ -351,6 +385,10 @@ sint8  GPIO_SetPort  (uint8 PortName)
 	case 'F':
 	  PORTF = 0xFF;
 		break;
+	case 'g':
+	case 'G':
+	  PORTG = 0xFF;
+		break;
 	default:
 		State = -1;
 	}
@@ -388,6 +426,10 @@ sint8  GPIO_ClearPort(uint8 PortName)
 	case 'f':
 	case 'F':
 		PORTF = 0x00;
+		break;
+	case 'g':
+	case 'G':
+		PORTG = 0x00;
 		break;
 	default:
 		State = -1;
@@ -476,6 +518,10 @@ sint8  GPIO_CheckPin (uint8 PortName,uint8 PinNumber)
 		case 'f':
 		case 'F':
 			State = (PINF & (1 << PinNumber))>>PinNumber;
+			break;
+		case 'g':
+		case 'G':
+			State = (PING & (1 << PinNumber))>>PinNumber;
 			break;
 		default:
 			State = -1;

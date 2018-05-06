@@ -27,7 +27,7 @@
 #define LEFT 1
 
 //SET MOTOR MAX SPEED
-#define MAXSPEEDPRECENTAGE 0.75
+#define MAXSPEEDPRECENTAGE 0.8
 #define MAX_SPEED (255*MAXSPEEDPRECENTAGE) // 255 * (0.75)
 
 /*************************************************

@@ -16,8 +16,8 @@ float power = 0;
 
 int PWM_Right, PWM_Left;
 
-void readSensor(void) {
-	lineTracerValue = readLineTracer();
+void readSensor(uint8 select) {
+	lineTracerValue = readLineTracer(select);
 
 	if(lineTracerValue == 0 ){
 		return ;
@@ -38,9 +38,9 @@ void readSensor(void) {
 }
 
   
-void linePID()
+void linePID(uint8 select)
 { 
-    readSensor();
+    readSensor(select);
     
     previousError = error; // save previous error for differential 
     error = avgSensor - 3; // Count how much robot deviate from center
@@ -71,9 +71,11 @@ void linePID()
 
 }
 
-void lineFollow(void) {
-   linePID();
-
-
+void lineFollow(uint8 select) {
+   linePID(select);
+   if(select == FIRSTMODULE)
+   RobotMove(BACKWORD,PWM_Right,BACKWORD,PWM_Left);
+   else
    RobotMove(FORWARD,PWM_Right,FORWARD,PWM_Left);
+
 }

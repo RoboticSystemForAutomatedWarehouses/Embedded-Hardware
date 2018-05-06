@@ -1,6 +1,6 @@
 
-#ifndef LINEFOLLOWERCONTROLLER_H_
-#define LINEFOLLOWERCONTROLLER_H_
+#ifndef CONTROLLERS_LINEFOLLOWERCONTROLLER_H_
+#define CONTROLLERS_LINEFOLLOWERCONTROLLER_H_
 
 #include "../HAL/lineTracer.h"
 #include "../HAL/motor.h"
@@ -12,9 +12,9 @@
 #define AVERAGESENS  3
 
 
-void readSensor(void);
-void linePID();
-void lineFollow(void);
+void readSensor(uint8);
+void linePID(uint8);
+void lineFollow(uint8);
 
 
-#endif /* LINEFOLLOWERCONTROLLER_H_ */
+#endif /* CONTROLLERS_LINEFOLLOWERCONTROLLER_H_ */

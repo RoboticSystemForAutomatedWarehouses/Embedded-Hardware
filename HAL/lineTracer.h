@@ -11,15 +11,39 @@
 #include "../ServiceLayer/std_types.h"
 #include "../MCAL/GPIO.h"
 
-///lineTracer port config
-#define lineTracerPort 'F'
-#define lineTracerPortDirection 'F'
+//define two sensors
+#define FIRSTMODULE  0
+#define SECONDMODULE 1
+///first lineTracer port config
+#define firstLineTracerPort 'F'
+#define firstLineTracerPortDirection 'F'
+
+//second lineTracer port config
+#define secondLineTracerPort 'C'
+#define secondLineTracerPortDirection 'C'
+
+//cross detection sensors port
+#define crossDetectionPort 'G'
+#define crossDetectionPortDirection 'G'
+
+//cross detection pins
+#define firstCrossDetectionSensor  1
+#define secondCrossDetectionSensor 4
+
 //lineTracer pin form lef to right
-#define Sensor0 1
-#define Sensor1 2
-#define Sensor2 3
-#define Sensor3 4
-#define Sensor4 0
+//first sensor
+#define Sensor10 1
+#define Sensor11 2
+#define Sensor12 3
+#define Sensor13 4
+#define Sensor14 0
+//second sensor
+#define Sensor20 0
+#define Sensor21 1
+#define Sensor22 2
+#define Sensor23 3
+#define Sensor24 4
+
 //define shift values _port numbers and sensors number are not the same_
 #define s0 0
 #define s1 1
@@ -36,6 +60,6 @@ extern uint8_t lineTracerValue;
  *  API functions
  *************************************************/
 void lineTracer_init();
-uint8_t readLineTracer();
+uint8_t readLineTracer(uint8);
 
 #endif /* LINETRACER_H_ */

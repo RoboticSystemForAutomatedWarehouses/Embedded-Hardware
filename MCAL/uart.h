@@ -67,7 +67,7 @@ uint8_t UART_Read(uint8_t UART);
 *
 * Return Value: Nothing
 ***********************************************************************/
-void UART_Transmit_string (char * str,uint8_t UART);
+void UART_Transmit_string (uint8 * str,uint8_t UART);
 
 
 #endif /* UART_H_ */

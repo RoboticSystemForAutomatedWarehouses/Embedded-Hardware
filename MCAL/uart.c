@@ -35,7 +35,7 @@ void UART_INIT(uint8_t UART)
 
 
 
-void UART_Transmit(uint8_t data, uint8_t UART)
+void UART_Transmit(uint8 data, uint8_t UART)
 {
 	switch (UART)
 	{
@@ -73,11 +73,13 @@ uint8_t UART_Read(uint8_t UART)
 }
 
 
-void UART_Transmit_string (char * str,uint8_t UART)
+void UART_Transmit_string (uint8 * str,uint8_t UART)
 {
 	unsigned char i= 0;
+	//send initial #
+	//UDR0 = '#';
 	 while(str[i]!=0)
-	    {UART_Transmit(str[i],UART) ; i++;}
+	    {UART_Transmit(str[i],UART0) ; i++;}
 }
 /*
 void UART_receiveString(unsigned char *Str,uint8_t UART)
